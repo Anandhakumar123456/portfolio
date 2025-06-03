@@ -1,9 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: #1A1A1A;
   color: #fff;
 }
+
 
 .hero-container {
   position: relative;
@@ -99,7 +105,7 @@ body {
   margin: 10% auto 5% auto;
   padding: 40px;
   height: 300px;
-  background:  #242424;
+  background: #242424;
   border-radius: 20px;
   overflow: visible;
   display: flex;
@@ -190,20 +196,6 @@ p {
   font-size: 1rem;
 }
 
-.projects-section {
-  position: relative;
-  max-width: 1200px;
-  margin: 10% auto 5% auto;
-  padding: 60px;
-  height: 500px;
-  border-radius: 20px;
-  overflow: visible;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  background:  #242424;
-}
 
 .projects-left h2 {
   color: white;
@@ -245,21 +237,37 @@ p {
   object-fit: contain;
 }
 
-.about-me {
-  background-color: #242424;
-  width: 100%;
-  height: 4%;
+.projects-section {
   position: relative;
   max-width: 1200px;
   margin: 10% auto 5% auto;
   padding: 60px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #242424;
+}
+
+.about-me {
+
+  position: relative;
+  max-width: 1200px;
+  margin: 10% auto 5% auto;
+  padding: 60px;
+  height: 4%;
   border-radius: 20px;
   overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   gap: 20px;
+  background: #242424;
+  /* width: 100%; */
+  flex-direction: column;
 
 }
 
@@ -283,6 +291,7 @@ p {
   color: #000;
   font-weight: 600;
 }
+
 .site-footer {
   background-color: #121212;
   color: #ffffff;
@@ -343,7 +352,7 @@ p {
   width: 20px;
   height: 20px;
 }
-  
+
 
 .fade-in-section {
   opacity: 0;
@@ -355,4 +364,339 @@ p {
 .fade-in-section.visible {
   opacity: 1;
   transform: none;
+}
+
+
+/* MediaQuery */
+
+/* For tablets and smaller devices */
+@media (max-width: 1024px) {
+  .hero-name {
+    font-size: 40px;
+  }
+
+  .hero-image {
+    width: 300px;
+    height: 300px;
+    top: 35%;
+    left: 560px;
+
+  }
+
+  .hero-container2,
+  .skills-section,
+  .projects-section {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .hero-container,
+  .hero-container2,
+  .skills-section,
+  .projects-section,
+  .about-me {
+    padding: 60px;
+    margin: 15% 5%;
+  }
+
+  .get-in {
+    font-size: 60px;
+  }
+
+  .skills-left h2,
+  .projects-left h2 {
+    font-size: 2rem;
+  }
+
+  .skill-item,
+  .project-item {
+    width: 100%;
+  }
+
+  .bottom-bar,
+  .bottom-bar2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-button {
+    margin-top: 20px;
+    float: none;
+  }
+
+  .projects-left {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 200px;
+    height: 200px;
+    top: 23%;
+    left: 55%;
+  }
+
+  .hero-container,
+  .hero-container2,
+  .skills-section,
+  .projects-section,
+  .about-me {
+    padding: 50px 30px;
+    margin: 10% 4%;
+  }
+
+  .hero-name-abt {
+    font-family: Larsseit, sans-serif;
+    font-size: 1.6rem;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    display: flex;
+  }
+
+
+  .bottom-bar2>p {
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+
+
+  .get-in {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-column>h3,
+  p {
+    margin-bottom: 0px;
+    padding-bottom: 0;
+
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 435px) {
+  .hero-name {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    left: 55%;
+  }
+
+  .hero-container,
+  .hero-container2,
+  .skills-section,
+  .projects-section,
+  .about-me {
+    padding: 30px 20px;
+    margin: 10% 4%;
+  }
+
+  .hero-name-abt {
+    font-family: Larsseit, sans-serif;
+    font-size: 1.3rem;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    display: flex;
+  }
+
+  .skills-left h2,
+  .projects-left h2 {
+    font-size: 1.2rem;
+  }
+
+
+  .bottom-bar2>p {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  .skills-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .skill-item,
+  .project-item {
+    background: #121212;
+    padding: 16px 24px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.3s ease;
+    cursor: default;
+  }
+
+
+
+  .get-in {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-column>h3,
+  p {
+    margin-bottom: 0px;
+    padding-bottom: 0;
+    font-size: 15px;
+
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 325px) {
+  .hero-name {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 150px;
+    height: 150px;
+    top: 14%;
+    left: 60%;
+  }
+
+  .hero-container,
+  .hero-container2,
+  .skills-section,
+  .projects-section,
+  .about-me {
+    padding: 20px 10px;
+    margin: 10% 4%;
+  }
+
+  .hero-name-abt {
+    font-family: Larsseit, sans-serif;
+    font-size: 1rem;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    display: flex;
+  }
+
+  .skills-left h2,
+  .projects-left h2 {
+    font-size: 1rem;
+  }
+
+
+  .bottom-bar2>p {
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+
+  .skills-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skill-item,
+  .project-item {
+    background: #121212;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+    cursor: default;
+  }
+
+  .projects-right,
+  .skills-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .get-in {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .button {
+    font-size: 10px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-column>h3,
+  p {
+    margin-bottom: 0px;
+    padding-bottom: 0;
+    font-size: 15px;
+
+  }
 }
